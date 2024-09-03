@@ -1,0 +1,12 @@
+python itu punya tipe data tipe datanya 
+tipe data python :
+-tipe data primitive
+ -integer (int) -> numerikal
+ -string (str) -> character a-z,0-9,special char
+ -float(float)->decimal(bilangan berkoma)
+ - boolean(bool)->true/false
+ tanda kutip merepresentasikan sebuah value yang string
+ tips untuk memprogram dengan baik yaitu gunakan variabel yang mudah dibaca
+  -gunakan variabel yang bermakna
+  -usahakan buat dokumentasi nya
+  setiap operasi matematika dapat dilakukan didalam pemograman,operasi merupakan representasikan lambang hitung
