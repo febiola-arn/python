@@ -24,3 +24,5 @@ print(pengurangan)
 print(modulo)
 print(pangkat)
 
+print("Hello Word")
+

@@ -1,0 +1,26 @@
+# Kamus untuk menyimpan data prospek kerja (contoh sederhana)
+
+print("hallo mahasiswa\n")
+kabar_hariini = {
+    "apa kabar?": "baik",
+    "makan apa ya siang ini?": "nasi bungkus,telor meledak",
+    "Psikologi": "Sedang, peluang di bidang konseling, HR, dan riset",
+    # Tambahkan prodi lain dan deskripsi prospek kerjanya
+}
+
+# Fungsi untuk memberikan rekomendasi
+def rekomendasi_kabar_hariini(kabar):
+    if kabar in kabar_hariini:
+        return kabar_hariini[kabar]
+    else:
+        return "Maaf,pertanyaan yang kamu tanyakan jawabannya belum tersedia"
+
+while True:
+    print("hallo mahasiswa.")
+    kabar_hariini = input("Masukkan responmu (ketik 'keluar' untuk berhenti): ")
+    if kabar_hariini.lower() == 'keluar':
+        print("Terima kasih telah menggunakan layanan ini.")
+        break
+    hasil = rekomendasi_kabar_hariini(kabar=input.lower())
+    print(hasil)
+
