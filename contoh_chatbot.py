@@ -3,7 +3,7 @@ from nltk.stem import PorterStemmer
 from nltk.tokenize import word_tokenize
 
 # Download NLTK data jika belum ada
-nltk.download('punkt')
+nltk.download()
 
 # Database jurusan (contoh sederhana)
 jurusan = {
@@ -13,7 +13,9 @@ jurusan = {
         "prospek_kerja": "Pengembang perangkat lunak, data scientist"
     },
     "psikologi": {
-        # ... data jurusan psikologi
+        "deskripsi": "Belajar tentang pikiran dan perilaku manusia.",
+        "mata_kuliah": "Psikologi Umum, Psikologi Pendidikan",
+        "prospek_kerja": "Psikolog, konselor"
     }
 }
 
@@ -49,9 +51,12 @@ def berikan_respons(pertanyaan, jurusan_pilihan):
         return "Jika Anda tertarik dengan {}, mungkin jurusan {} cocok untuk Anda.".format(jurusan_pilihan, jurusan_pilihan)
     elif kunci == "bakat":
         return "Jika Anda memiliki bakat di bidang {}, Anda bisa mempertimbangkan jurusan {}.".format(jurusan_pilihan, jurusan_pilihan)
-    # ... tambahkan kondisi untuk kata kunci lainnya
+    elif kunci == "mata_kuliah":
+        return "Jurusan {} mencakup mata kuliah seperti {}.".format(jurusan_pilihan, jurusan[jurusan_pilihan]["mata_kuliah"])
+    elif kunci == "kerja":
+        return "Prospek kerja untuk jurusan {} adalah: {}.".format(jurusan_pilihan, jurusan[jurusan_pilihan]["prospek_kerja"])
     else:
-        return "Maaf, saya tidak mengerti pertanyaan Anda. Silahkan coba lagi."
+        return "Maaf, saya tidak mengerti pertanyaan Anda. Silakan coba lagi."
 
 # Contoh penggunaan
 pertanyaan = "Saya suka belajar tentang komputer, jurusan apa yang cocok untuk saya?"
